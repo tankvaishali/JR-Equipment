@@ -1,0 +1,228 @@
+.profile_icon {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.profile_social {
+  transition: all 0.3s ease-in-out;
+}
+
+.profile_border {
+  border: 12px solid white;
+}
+
+.profilecon .contactimage {
+  box-shadow: none;
+}
+
+@media screen and (max-width:576px) {
+
+  .profilecon .contactimage {
+    width: 100%;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .profilecon .contactimage img {
+    width: 77%;
+    height: 380px;
+  }
+
+  .profilecon {
+    margin-top: -226px;
+    margin-bottom: -65px;
+  }
+
+  .profilesec {
+    transform: rotate(90deg);
+  }
+
+  .profile_social {
+    transform: rotate(270deg);
+  }
+}
+
+
+
+/* @media (min-width: 355px) and (max-width: 430px) {
+  .procontent {
+    margin-top: 100px !important;
+  }
+} */
+
+/* brouchers start */
+
+.brouchers_bg {
+  background-image: url("../images/old-texture-newspapers-arrangement-high-angle_23-2149318878.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0px 0px 1500px 1500px rgba(0, 0, 0, 0.815);
+  object-fit: fill;
+}
+
+/* brouchers end */
+
+
+/* certificates start */
+.certificate {
+  position: relative
+}
+
+.certificate::before,
+.certificate::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  transition: all 0.3s linear;
+  background: var(--dark--) !important;
+}
+
+.certificate span::before,
+.certificate span::after {
+  content: "";
+  width: 4px;
+  height: 0;
+  position: absolute;
+  transition: all 0.3s linear;
+  background: var(--secondary--) !important;
+}
+
+.certificate:hover::before,
+.certificate:hover::after {
+  width: 100%;
+}
+
+.certificate:hover span::before,
+.certificate:hover span::after {
+  height: 100%;
+}
+
+.certificate::after {
+  left: 0;
+  bottom: 0;
+  transition-duration: 0.5s;
+}
+
+.certificate span::after {
+  right: 0;
+  top: 0;
+  transition-duration: 0.5s;
+}
+
+.certificate::before {
+  right: 0;
+  top: 0;
+  transition-duration: 0.5s;
+}
+
+.certificate span::before {
+  left: 0;
+  bottom: 0;
+  transition-duration: 0.5s;
+}
+
+/* certificates end */
+
+/* Awards start */
+.image-all-together {
+  position: relative;
+}
+
+.image-all-together span {
+  position: absolute;
+  background-color: var(--dark--);
+  transition: .5s
+}
+
+.image-all-together .one {
+  height: 0;
+  width: 4px;
+  top: 0;
+  left: 0;
+}
+
+.image-all-together .two {
+  height: 4px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.image-all-together .three {
+  height: 0;
+  width: 4px;
+  bottom: 0;
+  right: 0
+}
+
+.image-all-together .four {
+  height: 4px;
+  width: 0;
+  top: 0;
+  right: 0;
+}
+
+.image-all-together:hover .one,
+.image-all-together:hover .three {
+  height: 100%;
+}
+
+.image-all-together:hover .two,
+.image-all-together:hover .four {
+  width: 100%;
+  background-color: var(--secondary--);
+}
+
+.image-all-together:hover img {
+  transition-duration: .5s;
+  transition-delay: .5s;
+
+}
+
+/* Awards end */
+
+
+/* Table Start */
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: gray;
+  color: white;
+  text-align: left;
+}
+
+.styled-table td {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.styled-table .header {
+
+
+  text-transform: uppercase;
+  /* font-size: 1.1em; */
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table End */

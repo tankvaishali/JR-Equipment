@@ -1,0 +1,218 @@
+/* AboutUsMain start */
+.bg_main{
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(67deg, black,rgba(0, 0, 0, 0.909),grey,rgba(0, 0, 0, 0.936),black);
+}
+
+.bgtittle{
+  transition: all 0.5s ease-in-out;
+}
+
+.bgtittle:hover{
+  color: var(--dark--) !important;
+}
+/* AboutUsMain end */
+
+.test-shinee {
+  position: relative;
+  overflow: hidden;
+}
+
+.test-shinee img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.test-shinee:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 12%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: linear-gradient(to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0) 100%);
+}
+
+/* Hover state - trigger effect */
+.test-shinee:hover:after {
+  opacity: 1;
+  left: 200%;
+  /* transition: left 0.9s ease, top 0.9s ease, opacity 0.15s ease; */
+  transition: left 1s ease-out, opacity 0.15s ease;
+}
+
+.test-shinee:active:after {
+  opacity: 0;
+}
+.count_text{
+  font-size: 1.75rem ;
+}
+@media only screen and (max-width: 1180px){
+  .count_text{
+    font-size: 1rem ;
+  }
+}
+
+/* infrastructure start */
+.infrastructure_bg{
+  background-image: url("../images/photo-grey-pipes-tanks-chemistry-medicine-production-pharmaceutical-factory-interior-hightech-factory-modern-production_645730-43.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  margin-top: 200px !important;
+  box-shadow: inset 0px 0px 1500px 1500px rgba(0, 0, 0, 0.614);
+}
+
+.productpera_color{
+  background-image:linear-gradient(180deg,var(--dark--) ,var(--dark--),var(--secondary--),var(--lightgray--));
+}
+/* infrastructure end */
+
+/* mission and vission start */
+
+.about_missionbg{
+background-image: url("../images/about-1-510x268.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: cover;
+object-position: bottom center;
+box-shadow: inset 0px 0px 1500px 1500px rgba(0, 0, 0, 0.87);
+}
+
+/* mission and vission end */
+
+/* our team start */
+.our-team-section:before {
+    position: absolute;
+    top: -0;
+    left: 0;
+    content: " ";
+    background-size: 100% 100px;
+    width: 100%;
+    height: 100px;
+    float: left;
+    z-index: 99;
+  }
+  .our-team {
+    padding: 30px 0 40px;
+    border-bottom: 5px solid var(--dark--);
+    transition: all 0.5s ease-in-out;
+  }
+  .our-team:hover {
+    border-bottom: 5px solid #2f2f2f;
+    border: 1px solid var(--secondary--);
+  }
+  
+  .our-team .pic {
+    width: 130px;
+    height: 130px;
+  }
+  .our-team .pic:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--dark--);
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 1;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+  }
+  .our-team:hover .pic:before {
+    height: 100%;
+    background: var(--secondary--);
+  }
+  .our-team .pic:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffffff00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.3s linear 0s;
+  }
+  .our-team:hover .pic:after {
+    background: var(--dark--);
+  }
+  .our-team .pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+    box-shadow: 0 0 0 14px var(--secondary--);
+    transform: scale(0.7);
+  }
+  .our-team:hover .pic img {
+    box-shadow: 0 0 0 14px var(--lightgray--);
+    transform: scale(0.7);
+  }
+  .our-team .team-content {
+    margin-bottom: 30px;
+  }
+  .our-team .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4e5052;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+ 
+  .our-team .social {
+    width: 100%;
+    background: var(--dark--);
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+    list-style-type: none;
+  }
+  .our-team:hover .social {
+    bottom: 0;
+  }
+  .our-team .social li .social_about{
+    display: inline-block;
+  }
+  .social_about{
+    color: var(--white--);
+    background-color: var(--dark--);
+    height: 30px ;
+    width: 30px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  .our-team .social li a:hover {
+    border-radius: 10px 0px 12px 0px;
+    color: var(--dark--);
+    background-color: var(--white--);
+
+  }
+  @media only screen and (max-width: 990px) {
+    .our-team {
+      margin-bottom: 30px;
+    }
+  }
+/* our team end */
+
+/* QualityAssurance start */
+
+/* QualityAssurance end */

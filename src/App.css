@@ -1,0 +1,447 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --dark--: rgb(25, 25, 25);
+  --lightgray--: rgb(171, 171, 171);
+  --white--: white;
+  --secondary--: #6c757d;
+  --fontstyle--: "Raleway", sans-serif;
+  --headermenu--: #b1b4c1;
+}
+
+/* AOS CSS */
+html:not(.no-js) [data-aos=fade-down] {
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
+}
+ ::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+ ::-webkit-scrollbar-track {
+  box-shadow: inset 0px 0px 10px var(--lightgray--) !important;
+}
+
+ ::-webkit-scrollbar-thumb {
+  background: var(--dark--) !important;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary--) !important;
+}
+
+/* header start */
+
+/* TopLine CSS Start */
+
+.navcolor {
+  background: linear-gradient(-120deg, var(--secondary--) 52%, black 52%);
+  position: fixed;
+  top: 0;
+  transition: top 0.3s;
+  z-index: 100;
+  width: 100%;
+  /* height: 55px; */
+}
+
+.navcolor.hide {
+  top: -55px !important;
+}
+
+.navcolor.show {
+  top: 0 !important;
+}
+
+.stickyShow {
+  top: 54px !important;
+  transition: 0.3s;
+}
+
+/* hover header dropdown menu */
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  z-index: 1000;
+  border-top: 5px solid black !important;
+  top: 100%;
+  border-radius: 0px 0px 25px 25px;
+  text-align: justify;
+}
+
+.abouthover .dropdown-menu {
+  width: 600px;
+  left: 0;
+}
+
+.producthover .dropdown-menu {
+  left: -275%;
+  width: 1050px;
+}
+
+.headerproduct_link {
+  /* transition: all 0.1s ease-in-out; */
+  color: var(--dark--) !important;
+}
+
+.prdouctlist_text {
+  font-size: 13px;
+  color: var(--dark--) !important;
+}
+
+.headerproduct_link:hover {
+  color: white !important;
+  background-color: var(--secondary--);
+}
+
+.headerproduct_link:hover .prdouctlist_text {
+  color: white !important;
+}
+
+.about_hoverimage {
+  background-image: url("./Assets/images/business-corporate-technology-people-graphic-concept_53876-21185.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.headerproduct_image {
+  width: 140px;
+  height: 140px;
+  background-color: #b1b4c15a;
+}
+
+.header_slickslider .slick-slider {
+  position: relative;
+}
+
+.header_slickslider .slick-prev,
+.header_slickslider .slick-next {
+  position: absolute;
+  background-color: var(--secondary--);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  z-index: 1;
+  bottom: 10px;
+  padding-top: 3px !important;
+}
+
+.header_slickslider .slick-prev::before,
+.header_slickslider .slick-next::before {
+  padding-top: 10px !important;
+  font-size: 22px;
+  color: white;
+}
+
+.header_slickslider .slick-prev {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-100%);
+}
+
+.header_slickslider .slick-next {
+  margin-left: 8px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(0);
+}
+
+.header_slickslider .slick-prev:hover,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-next:focus {
+  background-color: var(--dark--);
+}
+
+.nav-link.active .parallelogram {
+  background-color: var(--dark--);
+}
+
+.nav-link.active .text {
+  color: white !important;
+}
+
+/* header menu hover */
+.parallelogram {
+  padding: 20px 40px;
+  position: relative;
+  transform: skew(20deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--headermenu--);
+  margin-right: 1px !important;
+  margin-left: 1px !important;
+  transition: left 0.7s ease-in-out !important;
+}
+
+.parallelogram::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--dark--);
+  transition: left 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.parallelogram:hover::before {
+  left: 0;
+}
+
+.parallelogram:hover .text {
+  color: white !important;
+}
+
+.text {
+  position: relative;
+  transform: skew(-20deg);
+  color: var(--dark--);
+  font-weight: bold;
+  transition: all 0.7s ease-in-out !important;
+  font-size: 15px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 991px) {
+  .parallelogram {
+    transform: skew(0deg) !important;
+  }
+
+  .text {
+    transform: skew(0deg) !important;
+  }
+}
+
+.navbar-toggler {
+  padding: 5px !important;
+  box-shadow: inset 1px 1px 7px 3px rgba(128, 128, 128, 0.365) !important;
+  border-radius: 0px !important;
+}
+.navbar-toggler-icon {
+  width: 25px !important;
+  height: 25px !important;
+}
+.modal_search {
+  z-index: 11111 !important;
+}
+
+.search-form-container .formsearch {
+  max-height: 100vh !important;
+  width: 50%;
+}
+
+@media only screen and (max-width: 576px) {
+  .search-form-container .formsearch {
+    width: 100% !important;
+  }
+}
+
+.search-form-container .searchbody {
+  max-height: 80vh !important;
+}
+
+.formshadow {
+  box-shadow: inset 1px 1px 7px 3px rgba(128, 128, 128, 0.365) !important;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.searchtittle,
+.searchimg {
+  transition: all 0.3s ease-in-out;
+}
+
+.searchmain:hover .searchtittle {
+  color: var(--dark--) !important;
+}
+
+.searchmain:hover .searchimg {
+  transform: scale(1.2);
+}
+
+/* header end */
+/* image hover start */
+.test-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.test-shine img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.test-shine:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 12%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0) 100%);
+}
+
+/* Hover state - trigger effect */
+.test-shine:hover:after {
+  opacity: 1;
+  left: 200%;
+  /* transition: left 0.9s ease, top 0.9s ease, opacity 0.15s ease; */
+  transition: left 1s linear, opacity 0.15s ease;
+}
+
+.test-shine:active:after {
+  opacity: 0;
+}
+
+/* image hover end */
+/* button hover */
+.elementor-button {
+  position: relative;
+  overflow: hidden;
+  background: var(--secondary--);
+  transition: 0.3s ease-in-out;
+  display: inline-block;
+  height: 100%;
+}
+
+.elementor-button::after {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  display: block;
+  content: "";
+  width: calc(50% + 30px);
+  height: 100%;
+  background: black;
+  transform: skewX(20deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.elementor-button:hover::after {
+  left: 0;
+  width: 100%;
+  transform: skewX(0deg);
+}
+
+.elementor-button-text {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* font start */
+.pera {
+  font-size: 14px;
+}
+
+.jr_tittle {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: var(--fontstyle--);
+  /* text-transform: capitalize !important; */
+}
+
+@media only screen and (max-width:576px) {
+  .jr_tittle {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: var(--fontstyle--);
+  }
+}
+
+/* font end */
+
+/* Footer start */
+.footer_bg {
+  background-color: var(--dark--);
+}
+
+.footericon {
+  border: 1.5px solid gray;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px 0px 12px 0px;
+  font-size: 19px;
+}
+
+.footericon:hover {
+  border-radius: 50%;
+  border: 1.5px solid white;
+}
+
+.facebookicon:hover {
+  background-color: #1877f2 !important;
+}
+
+.instaicon:hover {
+  background-image: linear-gradient(180deg,
+      #833ab4,
+      #c13584,
+      #e1306c,
+      #f77737,
+      #ffdc80);
+}
+
+.linkicon:hover {
+  background-color: #0077b5 !important;
+}
+
+.twittericon:hover {
+  background-color: #1da1f2 !important;
+}
+
+.linktext_hover {
+  color: var(--lightgray--) !important;
+  transition: all 0.1s ease-in-out;
+}
+
+.linktext_hover:hover {
+  color: var(--white--) !important;
+}
+
+/* Footer end */
+
+@media only screen and (max-width: 991px) {
+  .search_size {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .headmenu {
+    width: 75% !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media only screen and (min-width: 991px)and (max-width: 1100px) {
+  .producthover .dropdown-menu {
+    left: -244%;
+    width: 1000px !important;
+  }
+}
